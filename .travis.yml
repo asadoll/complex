@@ -15,6 +15,7 @@ after_success:
   - docker build -t asadgharighi/multi-worker ./worker
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+
   # Take those images and push them to docker hub
   - docker push asadgharighi/multi-client
   - docker push asadgharighi/multi-nginx
