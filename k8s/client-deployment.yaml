@@ -4,16 +4,16 @@ metadata:
   name: client-deployment
 spec:
   replicas: 3
-  selecter:
+  selector:
     matchLabels:
       component: web
   template:
     metadata:
-      label:
+      labels:
         component: web
     spec:
       containers:
         - name: client
           image: asadgharighi/multi-client
           ports:
-            containerPort: 3000
+           - containerPort: 3000
